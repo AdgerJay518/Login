@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="Login">SharedPreferences登录</string>
+    <string name="Password">密&#160;&#160;&#160;&#160;码：</string>
+    <string name="Username">用户名：</string>
+    <string name="Success">成功登录</string>
+    <string name="InnerLogin">内部登录</string>
+    <string name="ExternalLogin">外部登录</string>
+    <string name="LLogin">登录</string>
+    <string name="DBLogin">SQLite登录</string>
+</resources>
