@@ -1,5 +1,6 @@
 package com.example.login
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Environment
 import android.view.View
@@ -27,7 +28,7 @@ class ExternelActivity: AppCompatActivity() {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             //创建File对象
             //参数为用户名和密码的储存路径
-            val file = File("sdcard/info.txt")
+            val file = File("sdcard/Android/data/com.example.login/files/info.txt")
             var fis: FileInputStream? = null
             //如果SD卡中存在info.txt
             if (file.exists()) {

@@ -21,9 +21,6 @@ class InnerActivity: AppCompatActivity() {
 
     //读取保存在本地的用户名和密码
     fun readAccount() {
-        //创建File对象
-        //第一个参数：文件的路径
-        //第二个参数：保存在本地文件的文件名
         val file = File(cacheDir, "info.txt")
         //如果本地存在info.txt
         if (file.exists()) {

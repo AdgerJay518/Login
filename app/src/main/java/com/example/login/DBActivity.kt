@@ -24,6 +24,7 @@ class DBActivity: AppCompatActivity()  {
         //读取保存在数据库的用户名和密码
         sqlitequery()
     }
+    //插入数据
     fun sqliteinsert() {
         val dbWrite: SQLiteDatabase = db.getReadableDatabase()
         val username = et_username!!.text.toString()
@@ -32,18 +33,15 @@ class DBActivity: AppCompatActivity()  {
         val kv = ContentValues()
         kv.put("username", username)
         kv.put("password", password)
-        Log.d("db", db.toString())
         dbWrite.insert("user", null, kv)
     }
+    //查询数据
     fun sqlitequery() {
         val dbRead = db.readableDatabase
         val cursor: Cursor = dbRead.query("user", null, null, null, null, null, null)
         while (cursor.moveToLast()) {
             val userid: String = cursor.getString(cursor.getColumnIndex("username"))
             val psw: String = cursor.getString(cursor.getColumnIndex("password"))
-            //读出数据显示在edittext中
-            Log.d("userid",userid)
-            Log.d("psw",psw)
             et_username!!.setText(userid)
             et_password!!.setText(psw)
             break
